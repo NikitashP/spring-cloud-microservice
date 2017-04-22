@@ -39,8 +39,10 @@ above console
 
 - Adding product to the catalog
 
+```json
 curl -i -X POST -H "Content-Type:application/json" -d "{  \"productName\" :
 \"cherry\",  \"productType\" : \"fruit\" }" http://localhost:10000/productcatalogservice/catalog
+
 HTTP/1.1 201 Created
 Server: Apache-Coyote/1.1
 X-Application-Context: gateway:10000
@@ -61,9 +63,9 @@ Transfer-Encoding: chunked
     }
   }
 }
-
+```
 -- View all products on the catalog
-
+```json
 curl http://localhost:10000/productcatalogservice/catalog
 {
   "_embedded" : {
@@ -120,10 +122,11 @@ curl http://localhost:10000/productcatalogservice/catalog
     "number" : 0
   }
 }
-
+```
 -- find specific item on the catalog
 
 curl http://localhost:10000/productcatalogservice/catalog/search/findByProductName?name=cherry
+```json
 {
   "_embedded" : {
     "products" : [ {
@@ -186,18 +189,17 @@ curl http://localhost:10000/productcatalogservice/catalog/search/findByProductTy
   },
   "_links" : {
     "self" : {
-      "href" : "http://localhost:10000/productcatalogservice/catalog/search/findByProductType?type=f
-ruit"
+      "href" : "http://localhost:10000/productcatalogservice/catalog/search/findByProductType?type=fruit"
     }
   }
 }
-
+```
 11. Working with Pricing service:
 
 --Adding price of a product
 
-curl -i -X POST -H "Content-Type:application/json" -d "{  \"productName\" :
-\"cherry\",  \"price\" : \"10.00\" }" http://localhost:10000/pricingservice/price
+```json
+curl -i -X POST -H "Content-Type:application/json" -d "{  \"productName\" :\"cherry\",  \"price\" : \"10.00\" }" http://localhost:10000/pricingservice/price
 HTTP/1.1 201 Created
 Server: Apache-Coyote/1.1
 X-Application-Context: gateway:10000
@@ -243,3 +245,4 @@ curl http://localhost:10000/pricingservice/price/search/findByProductName?name=c
     }
   }
 }
+```
