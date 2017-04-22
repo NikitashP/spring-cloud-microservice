@@ -23,4 +23,4 @@ Simple implementation of Microservices Using Spring Cloud.
 
 7. Load : http://localhost:8761/
 	1. you should be able to see:
-https://cloud.githubusercontent.com/assets/11174625/25307791/13c28bc8-27c5-11e7-8118-a5cb356e1cf8.png
+![image](https://cloud.githubusercontent.com/assets/11174625/25307809/5d22238c-27c5-11e7-93b7-6f2050b4424a.png)
